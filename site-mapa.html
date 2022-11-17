@@ -1,0 +1,34 @@
+    <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css-mapa.css">
+    <script type="text/javascript" src="jquery.js"> </script>
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4OHpAducSYhvx1cBy0xmA8LdcNaymRjE&callback=initMap" async defer>
+    </script>
+    <title>Rota de emergência</title>
+</head>
+<body>
+    <div class="container">
+        <div class="cabeca">
+            <h1>Rota de emergência</h1>
+        </div>
+        <div class="inputs">
+            <input id="local" type="text" name="seulocal" placeholder="Digite seu local">
+            <input id="destino" type="text" name="seudestino" placeholder="Digite o hospital">
+        </div>
+        <div id="map"></div>
+    </div>
+    <script>
+        function initMap(){
+                map = new google.maps.Map(document.getElementById('map'),{
+                    center: {lat: -23.559671524093282, lng: -46.63922410828452},
+                    zoom: 12
+                });
+            }
+    </script>
+</body>
+</html>
